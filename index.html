@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Calculadora Subredes - TecNM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Subredes</h1>
+            <p class="subtitle">REDES - TecNM</p>
+        </header>
+        
+        <div class="form-group">
+            <label>IP Base:</label>
+            <input type="tel" id="ipInput" placeholder="Ej: 192.168.1.0">
+        </div>
+        
+        <div class="form-group">
+            <label>Número de Subredes:</label>
+            <input type="number" id="subnetsInput" placeholder="Ej: 7" pattern="[0-9]*">
+        </div>
+        
+        <button class="btn-calculate" onclick="calculateSubnets()">CALCULAR AHORA</button>
+
+        <div class="scroll-container">
+            <table class="potencia-table">
+                <tr>
+                    <th rowspan="2" class="yellow-label">FORMULA</th>
+                    <td>2<sup>7</sup></td><td>2<sup>6</sup></td><td>2<sup>5</sup></td><td>2<sup>4</sup></td><td>2<sup>3</sup></td><td>2<sup>2</sup></td><td>2<sup>1</sup></td><td>2<sup>0</sup></td>
+                </tr>
+                <tr>
+                    <td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="results" class="results-area"></div>
+        <div id="procedimiento" class="procedimiento-area"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
